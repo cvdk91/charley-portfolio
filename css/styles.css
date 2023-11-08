@@ -1,0 +1,101 @@
+/*
+Colours used:
+Primary dark: #191919
+Primary light: #F5F5F5
+Green: #3B4F36
+Blue: #136DA9
+Grey-blue: #48687D
+Dark-blue: ##135B8A
+*/
+
+/*General styling*/
+img {
+    width: 100%;
+  }
+
+/*Header styling*/
+header {
+    position: fixed;
+    width: 100%;
+    background-color: white;
+    padding: 10px 0 4px;
+  }
+
+.logo {
+    width: 56px;
+    height: auto;
+}
+
+
+/*Body styling*/
+body {
+    font-size: 18px;
+    font-family: 'Mulish', sans-serif;
+    font-weight: 500;
+    line-height: 1.6
+    colour #191919
+}
+
+/*Headers styling*/
+h1, h2, h3, h4 {
+    line-height: 1.4;
+  }
+  h1 {
+    font-size: 4.8em;
+    font-weight: 1000;
+  }
+  
+  h2 {
+    font-size: 3.2em;
+    font-weight: 1000;
+  }
+  
+  h3 {
+    font-size: 3.2em;
+    font-weight: 600;
+  }
+
+  h4 {
+    font-size: 2.4em;
+    font-weight: 1000;
+    text-decoration: underline;
+  }
+
+  h5{
+    font-size: 1.6em;
+    font-weight: 1000;
+  }
+
+/*Links styling*/
+  a {
+    color: #136DA9;
+    text-decoration: none; /* No underlining */
+  }
+  a:hover,
+  a:focus {
+    color: #136DA9;
+    text-decoration: underline; /* Underlining when hovering over a link */
+  }
+
+  .button {
+    display: inline-block; 
+    background-color: #136DA9;
+    color: #F5F5F5; /* needed to override the default link color */
+    font-weight: 800;
+    padding: 10px;
+    border-radius: 0px;
+    border-bottom: 0px solid #191919; /* width of the border, type, color */
+    transition: 0.2s opacity;
+  }
+
+  .button:hover {
+    color: #F5F5F5;
+    background-color: #135B8A;
+    text-decoration: none;
+  }
+
+/*Footer styling*/
+footer{
+    color: #F5F5F5;
+    background-color: #191919;
+}
