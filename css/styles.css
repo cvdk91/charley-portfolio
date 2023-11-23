@@ -2,43 +2,86 @@
 Colours used:
 Primary dark: #191919
 Primary light: #F5F5F5
+Grey: #B5B5B5
+Light grey: #D5D5D5
 Green: #3B4F36
 Blue: #136DA9
 Grey-blue: #48687D
 Dark-blue: ##135B8A
 */
 
-/*General styling*/
+/* Layout styling */
+.container {
+  padding: 0 10%;
+  margin-bottom: 40px;
+}
+
+html {background-color: #191919}
+
+.row {
+  margin: 40px 0; /* 25px top and bottom, 0 left and right */
+}
+
+/*Image styling*/
 img {
     width: 100%;
   }
 
+
+#link a:hover {
+  color: #D5D5D5
+}
+
 /*Header styling*/
 header {
-    position: fixed;
+    position: relative;
     width: 100%;
-    background-color: white;
-    padding: 10px 0 4px;
+    background-color: #191919;
+    padding: 24px 0;
+    margin-top: 24px;
+    text-align: center;
   }
 
+.header_border {
+  border-bottom: 0.5px solid #F5F5F5;
+}
+
 .logo {
-    width: 56px;
+    max-width: 600px;
     height: auto;
 }
 
+nav > ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+nav > ul > li {
+  display: inline-block;
+}
+
+nav > ul > li > a {
+  padding: 0 16px;
+  font-weight: 400;
+  color: #F5F5F5;
+}
 
 /*Body styling*/
 body {
+    color: #d5d5d5;
     font-size: 18px;
     font-family: 'Mulish', sans-serif;
     font-weight: 500;
     line-height: 1.6
-    colour #191919
 }
+
+
+
 
 /*Headers styling*/
 h1, h2, h3, h4 {
     line-height: 1.4;
+    color: #F5F5F5;
   }
   h1 {
     font-size: 4.8em;
@@ -46,17 +89,17 @@ h1, h2, h3, h4 {
   }
   
   h2 {
-    font-size: 3.2em;
+    font-size: 2.4em;
     font-weight: 1000;
   }
   
   h3 {
-    font-size: 3.2em;
+    font-size: 2.4em;
     font-weight: 600;
   }
 
   h4 {
-    font-size: 2.4em;
+    font-size: 1.6em;
     font-weight: 1000;
     text-decoration: underline;
   }
@@ -68,12 +111,12 @@ h1, h2, h3, h4 {
 
 /*Links styling*/
   a {
-    color: #136DA9;
+    color: #F5F5F5;
     text-decoration: none; /* No underlining */
   }
   a:hover,
   a:focus {
-    color: #136DA9;
+    color: #F5F5F5;
     text-decoration: underline; /* Underlining when hovering over a link */
   }
 
@@ -94,8 +137,23 @@ h1, h2, h3, h4 {
     text-decoration: none;
   }
 
+
+
 /*Footer styling*/
 footer{
+    position: relative;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
     color: #F5F5F5;
     background-color: #191919;
+    border-top: 0.5px solid #F5F5F5;
+
+}
+
+.footer_icon {
+  max-width: 24px;
+  height: auto;
+  padding: 0 8px;
+  margin: 40px 0;
 }
