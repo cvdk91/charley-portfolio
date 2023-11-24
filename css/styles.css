@@ -14,12 +14,37 @@ Dark-blue: ##135B8A
 .container {
   padding: 0 10%;
   margin-bottom: 40px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 html {background-color: #191919}
 
 .row {
-  margin: 40px 0; /* 25px top and bottom, 0 left and right */
+  margin: 40px 0; /* 40px top and bottom, 0 left and right */
+}
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.col-md-6 {
+  width: 100%;
+}
+
+[class*="col-"] {
+  float: left;
+  padding-left: 10px;
+  padding-right: 10px;
+
+}
+
+.extra_padding {
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 /*Image styling*/
@@ -27,9 +52,77 @@ img {
     width: 100%;
   }
 
+.image {
+  opacity: 1;
+  display: block;
+  width: 50%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
 
-#link a:hover {
-  color: #D5D5D5
+.overlay {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%)
+}
+
+.text {
+  background-color: #4CAF50;
+  color: white;
+  font-size: 2.4em;
+  font-weight: 1000;
+  padding: 16px 32px;
+}
+
+.changesImgOnHover {
+  display: inline-block; /* or just block */
+  width: 100%;
+}
+.changesImgOnHover:hover img {
+  opacity: 0.3;
+}
+.changesImgOnHover:hover .overlay {
+  opacity: 40;
+}
+
+/*Gallery styling*/
+div.gallery {
+  border: 1px solid #ccc;
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.responsive {
+  padding: 0 6px;
+  float: left;
+  width: 24.99999%;
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
 }
 
 /*Header styling*/
@@ -109,11 +202,17 @@ h1, h2, h3, h4 {
     font-weight: 1000;
   }
 
+  h6{
+    font-size: 1.6em;
+    font-weight: 600;
+  }
+
 /*Links styling*/
-  a {
+a {
     color: #F5F5F5;
     text-decoration: none; /* No underlining */
   }
+
   a:hover,
   a:focus {
     color: #F5F5F5;
@@ -137,7 +236,38 @@ h1, h2, h3, h4 {
     text-decoration: none;
   }
 
+  #link 
+  a,
+  a:hover {
+    color: #d5d5d5;
+  }
 
+/*Animation styling*/
+@keyframes color-change {
+  0% {fill: #edc655;}
+  50% {fill: #fcffad;}
+  100% {fill: #f76414;}
+}
+
+.sun {
+  animation: 4s color-change infinite alternate linear;
+}
+
+@keyframes cloud-move-reverse {
+  from {transform: translate(446px,48px);}
+  to {transform: translate(100px, 48px);}
+}
+
+.cloud-back {
+  animation: 34s cloud-move-reverse infinite alternate linear;
+}
+
+.animation {
+  max-width: 300px;
+  height: auto;
+  padding: 0 8px;
+  margin: 40px 0;
+}
 
 /*Footer styling*/
 footer{
@@ -152,8 +282,24 @@ footer{
 }
 
 .footer_icon {
-  max-width: 24px;
+  width: 40px;
   height: auto;
   padding: 0 8px;
   margin: 40px 0;
 }
+
+/* ==============================
+Medium devices (640px and larger)
+================================= */
+@media only screen and (min-width: 640px) {
+.col-md-6 {width: 49.99999%;
+  margin: 0px 0;}  
+}
+
+/* ==============================
+Large devices (1024px or larger)
+================================= */
+@media only screen and (min-width: 1024px) {
+  
+}
+
