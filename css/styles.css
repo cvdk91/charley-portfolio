@@ -262,13 +262,6 @@ a {
   animation: 34s cloud-move-reverse infinite alternate linear;
 }
 
-.animation {
-  max-width: 300px;
-  height: auto;
-  padding: 0 8px;
-  margin: 40px 0;
-}
-
 /*Footer styling*/
 footer{
     position: relative;
