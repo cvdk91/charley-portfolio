@@ -130,8 +130,8 @@ header {
     position: relative;
     width: 100%;
     background-color: #191919;
-    padding: 24px 0;
-    margin-top: 24px;
+    padding: 0px 0;
+    margin-top: 40px;
     text-align: center;
   }
 
@@ -142,6 +142,7 @@ header {
 .logo {
     max-width: 600px;
     height: auto;
+    padding-right: 80px;
 }
 
 nav > ul {
@@ -157,6 +158,40 @@ nav > ul > li > a {
   padding: 0 16px;
   font-weight: 400;
   color: #F5F5F5;
+}
+
+.navtoggle li:not(:last-child) { /*this targets navigation bar and hids all tabs but last li, allowing hamburger icon to be used by js*/
+  display: none;
+}
+
+.navtoggle, .navtoggle.responsive {
+  position: relative;
+}
+
+.navtoggle li .icon {
+  position: absolute;
+  right: 0;
+  top: 0px;
+  font-size: 20px;
+  padding-right: 0;
+  padding-top: 10px;
+  color:#ffffff;
+}
+
+
+.navtoggle.responsive nav {
+  padding: 24px 0 0;
+}
+
+.navtoggle.responsive li {
+  display: block;
+  padding: 0px 0;
+  /* border-top: 1px solid rgba (255, 127, 80, 0.5); */
+  text-align: right;
+}
+
+.navtoggle.responsive li:last-child {
+  padding: 0 0 0px;
 }
 
 /*Body styling*/
@@ -293,6 +328,17 @@ Medium devices (640px and larger)
 Large devices (1024px or larger)
 ================================= */
 @media only screen and (min-width: 1024px) {
-  
+  nav > ul > li { /*turns all listed items in  the nav to inline-blocks so they can be next to each other*/
+    display: inline-block;
+}
+.navtoggle li:not(:last-child){ /*this reverses the default code for the hamburger menu and shows tabs on larger screens*/
+    display: inline-block;
+}
+.navtoggle li:last-child { /*hides last child = hamburger menu*/
+    display: none;
+}
+nav > ul {
+  margin: 1em 0;
+}
 }
 

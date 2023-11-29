@@ -13,20 +13,25 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@500;600;700;800;1000&display=swap" rel="stylesheet">
 
+    <script src="https://kit.fontawesome.com/3d0e9fd603.js" crossorigin="anonymous"></script>
+
     <title>Elan</title>
 </head>
 
 <body>
     <header>
-        <div>
+        <div class="container">
+        <div class="navtoggle" id="myNavtoggle">
             <img src="img/logo_full.png" class="logo" alt="logo">
             <nav>
                 <ul>
-                    <li><a href="index.html">work</a></li>
-                    <li><a  href="about.html">about</a></li>
-                    <li><a  href="#contact">contact</a></li>
-            </ul>
+                    <li><a class= "nav-link" href="index.html">work</a></li>
+                    <li><a  class= "nav-link" href="about.html">about</a></li>
+                    <li><a  class= "nav-link" href="#contact">contact</a></li>
+                    <li><a href="javascript:void(0);" class="icon" onclick="menuToggle()"><i class="fas fa-bars"></i></a></li>
+                </ul>
             </nav>
+        </div>
         </div>
     </header>
 
@@ -147,6 +152,10 @@
             <a href="https://www.instagram.com/charleyvanderkrogt/?hl=en" target="_blank"><img src="img/instagram.svg" class="footer_icon" alt="Instagram"></a>
         </div>
     </footer>
+
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"
+    integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+    <script src="js/scripts.js"></script>
 
 </body>
 
